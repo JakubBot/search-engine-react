@@ -10,12 +10,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
+    margin: 0 30px;
     &__companyName {
       font-size: 30px;
       letter-spacing: 2px;
       display: none;
-    
+
       @media screen and (min-width: 600px) {
         display: block;
       }
@@ -27,7 +27,6 @@
 
     & img {
       width: 80px;
-      margin-left: 30px;
     }
 
     &__login {
@@ -46,8 +45,32 @@
       }
     }
   }
+
+  &__googleLogin {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    @media screen and (min-width: 600px) {
+      padding: 0 40px;
+      gap: 15px;
+    }
+    & button {
+      grid-column: 2/3;
+    }
+  }
+  &__informations {
+    @media screen and (min-width: 600px) {
+     display: flex;
+     justify-content: space-around;
+    }
+  }
 }
 
 .green {
   color: #4eb42a;
+}
+.loginGoogle {
+  display: flex;
 }
