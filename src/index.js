@@ -1,7 +1,7 @@
 import React, { createContext, useReducer } from 'react';
 import ReactDOM from 'react-dom';
 import HomePage from './HomePage';
-
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 export const Config = createContext();
 
 const store = {
@@ -25,9 +25,15 @@ const App = () => {
   );
 };
 
+const Cos = () => {
+  return <h1>Cos</h1>;
+};
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <Route exact path="/" component={App} />
+      <Route path="/cos" component={Cos} />
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,19 +1,49 @@
 import React from 'react';
-import homeImage from '../../images/group.png'
+import homeImage from '../../images/group.png';
 import './home.scss';
-
+import arrow from '../../images/right-arrow.png';
+import { Link } from 'react-router-dom';
 const Home = () => {
   return (
-    <div className="home">
-      <div className="home__text">
-        <h1>The Best</h1>
-        <h1 className="green">Search</h1>
-        <h1>Engine</h1>
+    <>
+      <div className="home">
+        <div className="home__text">
+          <h1>The Best</h1>
+
+          <h1 className="green">Search</h1>
+          <h1>Engine</h1>
+        </div>
+        <div className="home__image">
+          <img src={homeImage} alt="blob" />
+        </div>
       </div>
-      <div className="home__image">
-        <img src={homeImage} />
-      </div>
-    </div>
-  )
-}
-export default Home
+        <div className="links">
+          <div className="links__item">
+            <Link to="/github">
+              <img src={arrow} alt="arrow" />
+              <h2>Github users</h2>
+            </Link>
+          </div>
+          <div className="links__item">
+            <Link to="/facebook">
+              <img src={arrow} alt="arrow" />
+              <h2>Facebook users</h2>
+            </Link>
+          </div>
+          <div className="links__item">
+            <Link to="/weather" >
+              <img src={arrow} alt="arrow" />
+              <h2>Weather forecast</h2>
+            </Link>
+          </div>
+          <div className="links__item">
+            <Link to="cos">
+              <img src={arrow} alt="arrow" />
+              <h2>Cos tam</h2>
+            </Link>
+          </div>
+        </div>
+    </>
+  );
+};
+export default Home;
