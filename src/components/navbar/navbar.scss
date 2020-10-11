@@ -1,7 +1,9 @@
+@import '../colors.scss';
+
 .navbar {
   width: 100%;
   height: 120px;
-  background-color: #efefef7a;
+  background-color: $gray;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -22,7 +24,7 @@
       .green {
         font-size: 40px;
         margin-left: 15px;
-        color: #4eb42a;
+        color: $green;
       }
     }
 
@@ -60,6 +62,8 @@
     }
     button {
       grid-column: 2/3;
+      transform: scale(1.1);
+      outline: none;
     }
     p {
       text-align: center;

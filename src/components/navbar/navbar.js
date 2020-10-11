@@ -3,8 +3,7 @@ import { GoogleLogin, GoogleLogout } from 'react-google-login';
 // import/no-cycle
 import { Config } from '../../index';
 
-import logo from '../../assets/images/logo.png';
-import '../../assets/fontello/fontello.css';
+import logo from '../../images/logo.png';
 import './navbar.scss';
 
 const Navbar = () => {
