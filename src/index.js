@@ -1,7 +1,7 @@
 import React, { createContext, useReducer } from 'react';
 import ReactDOM from 'react-dom';
 import HomePage from './HomePage';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch,Route } from 'react-router-dom';
 export const Config = createContext();
 
 const store = {
@@ -31,8 +31,9 @@ const Cos = () => {
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <Route exact path="/" component={App} />
-      <Route path="/cos" component={Cos} />
+      <Route exact path="/search-engine-react" component={App} />
+      <Route  path="/github" component={Cos} />
+     
     </Router>
   </React.StrictMode>,
   document.getElementById('root')
