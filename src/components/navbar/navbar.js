@@ -1,18 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { GoogleLogin, GoogleLogout } from 'react-google-login';
+// import/no-cycle
+import { Config } from '../../index';
+
 import logo from '../../assets/images/logo.png';
 import '../../assets/fontello/fontello.css';
 import './navbar.scss';
 
 const Navbar = () => {
-  const [logIn, setLogIn] = useState(false);
+  const user = useContext(Config);
+
   const [userName, setUserName] = useState('');
   const onSignIn = (googleUser) => {
-    setLogIn(true);
+    user.dispatch({ type: 'logIn', logIn: true });
     setUserName(googleUser.getBasicProfile().getName());
   };
   const onSignOut = () => {
-    setLogIn(false);
+    user.dispatch({ type: 'logIn', logIn: false });
   };
   const onError = () => {
     setUserName('Error');
@@ -27,13 +31,13 @@ const Navbar = () => {
         </h3>
       </div>
       <div className="navbar__googleLogin">
-        {logIn ? (
+        {user.state.logIn ? (
           <div className="navbar__informations">
             <p>Witamy</p>
             <p>{userName}</p>
           </div>
         ) : null}
-        {logIn ? (
+        {user.state.logIn ? (
           <>
             <GoogleLogout
               clientId="741663086321-1eip7aa6cc3i91agpj31b5a0rbhg7otm.apps.googleusercontent.com"
