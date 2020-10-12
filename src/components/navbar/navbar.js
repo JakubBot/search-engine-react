@@ -12,7 +12,7 @@ const Navbar = () => {
   const [userName, setUserName] = useState('');
   const onSignIn = (googleUser) => {
     user.dispatch({ type: 'logIn', logIn: true });
-    setUserName(googleUser.getBasicProfile().getName());
+    user.dispatch({type: 'userName', name: googleUser.getBasicProfile().getName()})
   };
   const onSignOut = () => {
     user.dispatch({ type: 'logIn', logIn: false });
@@ -33,7 +33,7 @@ const Navbar = () => {
         {user.state.logIn ? (
           <div className="navbar__informations">
             <p>Witamy</p>
-            <p>{userName}</p>
+            <p>{user.state.userName}</p>
           </div>
         ) : null}
         {user.state.logIn ? (
