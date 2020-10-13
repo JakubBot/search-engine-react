@@ -3,12 +3,26 @@ import './search.scss';
 
 const Search = () => {
   const [userNameInput, setUserNameInput] = useState('');
-  const [userData, setUserData] = useState(null);
+  const [userData, setUserData] = useState({});
+  const [isLoading, setIsLoading] = useState(true);
+  const [isError, setIsError] = useState(false);
+
   const handleSubmit = (e) => {
     e.preventDefault();
+
     fetch(`https://api.github.com/users/${userNameInput}`)
-      .then((res) => res.json())
-      .then((res) => setUserData(res));
+      .then((res) => {
+        if (!res.ok) {
+          setIsError(true);
+        } else {
+          setIsError(false);
+        }
+        return res.json();
+      })
+      .then((res) => {
+        setUserData(res);
+        setIsLoading(false);
+      });
   };
   return (
     <div className="cardContainer">
@@ -22,15 +36,19 @@ const Search = () => {
         />
         <button>Find</button>
       </form>
-      {userData !== null ? (
-        <div className="github-container">
-          <div className="github-container__profile">
-            <img src={userData.avatar_url} />
-            <h2>{userData.name}</h2>
+      <div style={{ display: isLoading == true ? 'none' : 'block' }}>
+        {isError ? (
+          <h3>Something went wrong.Try again</h3>
+        ) : (
+          <div className="github-container">
+            <div className="github-container__profile">
+              <img src={userData.avatar_url} />
+              <h2>{userData.name}</h2>
+            </div>
+            <p>{userData.bio}</p>
           </div>
-          <p>{userData.bio}</p>
-        </div>
-      ) : null}
+        )}
+      </div>
     </div>
   );
 };
