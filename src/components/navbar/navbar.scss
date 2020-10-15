@@ -29,9 +29,18 @@
     }
 
     img {
-      width: 80px;
+      width: 60px;
     }
-
+    .left {
+      width: 30px;
+      transform: rotate(-180deg);
+      cursor: pointer;
+    }
+    .navbar__item__back {
+      margin-left: 7px;
+      letter-spacing: 1px;
+      cursor: pointer;
+    }
     &__login {
       cursor: pointer;
       font-weight: normal;

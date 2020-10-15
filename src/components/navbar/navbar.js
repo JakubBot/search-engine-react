@@ -1,34 +1,55 @@
-import React, { useState, useContext } from 'react';
+/* eslint-disable import/no-cycle */
+import React, { useContext } from 'react';
 import { GoogleLogin, GoogleLogout } from 'react-google-login';
-// import/no-cycle
+import { withRouter } from 'react-router-dom';
 import { Config } from '../../index';
-
 import logo from '../../images/logo.png';
+import arrow from '../../images/right-arrow.png';
 import './navbar.scss';
 
-const Navbar = () => {
+const Navbar = (props) => {
   const user = useContext(Config);
 
-  const [userName, setUserName] = useState('');
   const onSignIn = (googleUser) => {
     user.dispatch({ type: 'logIn', logIn: true });
-    user.dispatch({type: 'userName', name: googleUser.getBasicProfile().getName()})
+    user.dispatch({
+      type: 'userName',
+      name: googleUser.getBasicProfile().getName(),
+    });
   };
   const onSignOut = () => {
     user.dispatch({ type: 'logIn', logIn: false });
   };
   const onError = () => {
-    setUserName('Error');
+    // eslint-disable-next-line no-alert
+    alert('something went wrong try again');
   };
+  const onReturn = () => {
+    props.history.push('./search-engine-react');
+  };
+
   return (
     <div className="navbar">
-      <div className="navbar__item">
-        <img src={logo} alt="logo" />
-        <h3 className="navbar__item__companyName">
-          <span className="green">L</span>
-          eppo
-        </h3>
-      </div>
+      {props.isMainPage ? (
+        <div className="navbar__item">
+          <img src={logo} alt="logo" />
+          <h3 className="navbar__item__companyName">
+            <span className="green">L</span>
+            eppo
+          </h3>
+        </div>
+      ) : (
+        <div
+          className="navbar__item"
+          onClick={onReturn}
+          role="button"
+          tabIndex={0}
+        >
+          <img src={arrow} alt="arrow" className="left" />
+          <h3 className="navbar__item__back">Back</h3>
+        </div>
+      )}
+
       <div className="navbar__googleLogin">
         {user.state.logIn ? (
           <div className="navbar__informations">
@@ -58,4 +79,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default withRouter(Navbar);

@@ -21,7 +21,7 @@
     "react/prefer-stateless-function": [0],
     "jsx-a11y/click-events-have-key-events": [0],
     "jsx-a11y/label-has-associated-control": [0],
-    "no-cycle": [4]
+    "import/no-cycle": "off"
   },
   "env": {
     "browser": true

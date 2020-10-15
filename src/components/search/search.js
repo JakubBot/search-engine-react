@@ -34,15 +34,15 @@ const Search = () => {
           value={userNameInput}
           onChange={(e) => setUserNameInput(e.target.value)}
         />
-        <button>Find</button>
+        <button type="submit">Find</button>
       </form>
-      <div style={{ display: isLoading == true ? 'none' : 'block' }}>
+      <div style={{ display: isLoading === true ? 'none' : 'block' }}>
         {isError ? (
           <h3>Something went wrong.Try again</h3>
         ) : (
           <div className="github-container">
             <div className="github-container__profile">
-              <img src={userData.avatar_url} />
+              <img src={userData.avatar_url} alt="userAvatar" />
               <h2>{userData.name}</h2>
             </div>
             <p>{userData.bio}</p>
