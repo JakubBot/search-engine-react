@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/search-engine-react/static/css/main.377ff748.chunk.css",
-    "main.js": "/search-engine-react/static/js/main.9169eed2.chunk.js",
-    "main.js.map": "/search-engine-react/static/js/main.9169eed2.chunk.js.map",
+    "main.css": "/search-engine-react/static/css/main.8c33623d.chunk.css",
+    "main.js": "/search-engine-react/static/js/main.eb984cc7.chunk.js",
+    "main.js.map": "/search-engine-react/static/js/main.eb984cc7.chunk.js.map",
     "runtime-main.js": "/search-engine-react/static/js/runtime-main.09d406f0.js",
     "runtime-main.js.map": "/search-engine-react/static/js/runtime-main.09d406f0.js.map",
     "static/css/2.8ff17cee.chunk.css": "/search-engine-react/static/css/2.8ff17cee.chunk.css",
-    "static/js/2.a6944a0b.chunk.js": "/search-engine-react/static/js/2.a6944a0b.chunk.js",
-    "static/js/2.a6944a0b.chunk.js.map": "/search-engine-react/static/js/2.a6944a0b.chunk.js.map",
+    "static/js/2.bf84f200.chunk.js": "/search-engine-react/static/js/2.bf84f200.chunk.js",
+    "static/js/2.bf84f200.chunk.js.map": "/search-engine-react/static/js/2.bf84f200.chunk.js.map",
     "index.html": "/search-engine-react/index.html",
-    "precache-manifest.338e1562477a64a36d05a9484c5b5362.js": "/search-engine-react/precache-manifest.338e1562477a64a36d05a9484c5b5362.js",
+    "precache-manifest.78ac7643904004d0b4a4ff0572377b10.js": "/search-engine-react/precache-manifest.78ac7643904004d0b4a4ff0572377b10.js",
     "service-worker.js": "/search-engine-react/service-worker.js",
     "static/css/2.8ff17cee.chunk.css.map": "/search-engine-react/static/css/2.8ff17cee.chunk.css.map",
-    "static/css/main.377ff748.chunk.css.map": "/search-engine-react/static/css/main.377ff748.chunk.css.map",
-    "static/js/2.a6944a0b.chunk.js.LICENSE.txt": "/search-engine-react/static/js/2.a6944a0b.chunk.js.LICENSE.txt",
+    "static/css/main.8c33623d.chunk.css.map": "/search-engine-react/static/css/main.8c33623d.chunk.css.map",
+    "static/js/2.bf84f200.chunk.js.LICENSE.txt": "/search-engine-react/static/js/2.bf84f200.chunk.js.LICENSE.txt",
     "static/media/group.png": "/search-engine-react/static/media/group.f93e3631.png",
     "static/media/logo.png": "/search-engine-react/static/media/logo.f61f3542.png"
   },
   "entrypoints": [
     "static/js/runtime-main.09d406f0.js",
     "static/css/2.8ff17cee.chunk.css",
-    "static/js/2.a6944a0b.chunk.js",
-    "static/css/main.377ff748.chunk.css",
-    "static/js/main.9169eed2.chunk.js"
+    "static/js/2.bf84f200.chunk.js",
+    "static/css/main.8c33623d.chunk.css",
+    "static/js/main.eb984cc7.chunk.js"
   ]
 }
