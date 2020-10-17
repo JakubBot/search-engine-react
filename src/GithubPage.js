@@ -1,12 +1,12 @@
 import React from 'react';
 import Navbar from './components/navbar/navbar';
-import Search from './components/search/search';
+import GithubSearch from './components/githubSearch/githubSearch';
 
 const GithubPage = () => {
   return (
     <>
       <Navbar isMainPage={false} />
-      <Search />
+      <GithubSearch />
     </>
   );
 };

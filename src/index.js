@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import GoogleMapsPage from './GoogleMapsPage';
 import HomePage from './HomePage';
 import GithubPage from './GithubPage';
+import WeatherPage from './Weather';
 import './index.scss';
 
 // eslint-disable-next-line import/prefer-default-export
@@ -56,12 +57,23 @@ const GoogleMapsPages = () => {
   );
 };
 
+const WeatherPages = () => {
+  const [state, dispatch] = useReducer(reducer, store);
+  Object.assign(store, state);
+  return (
+    <Config.Provider value={{ state, dispatch }}>
+      <WeatherPage />
+    </Config.Provider>
+  );
+};
+
 ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Route exact path="/search-engine-react" component={HomePages} />
       <Route path="/github" component={GithubPages} />
       <Route path="/googleMaps" component={GoogleMapsPages} />
+      <Route path="/weather" component={WeatherPages} />
     </Router>
   </React.StrictMode>,
   document.getElementById('root')
