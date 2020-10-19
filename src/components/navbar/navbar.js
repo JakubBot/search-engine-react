@@ -22,7 +22,7 @@ const Navbar = (props) => {
   };
   const onError = () => {
     // eslint-disable-next-line no-alert
-    alert('something went wrong try again');
+    // alert('something went wrong try again');
   };
   const onReturn = () => {
     props.history.push('./search-engine-react');
@@ -72,6 +72,7 @@ const Navbar = (props) => {
             onSuccess={onSignIn}
             onFailure={onError}
             cookiePolicy="single_host_origin"
+
           />
         )}
       </div>

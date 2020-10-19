@@ -38,9 +38,9 @@ const Home = () => {
           </Link>
         </div>
         <div className="links__item">
-          <Link to="cos">
+          <Link to="facebook">
             <img src={arrow} alt="arrow" />
-            <h2>Cos tam</h2>
+            <h2>Facebook users</h2>
           </Link>
         </div>
       </div>
