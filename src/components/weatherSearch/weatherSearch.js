@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './weatherSearch.scss';
 
 const Search = () => {
-  const url = 'http://api.openweathermap.org/data/2.5/weather?q=';
+  const url = 'https://api.openweathermap.org/data/2.5/weather?q=';
   const apiKey = '6e72cfca1f49bd300ba9ab9c8582c0aa';
   const [userCityInput, setUserCityInput] = useState('');
   const [userData, setUserData] = useState({});

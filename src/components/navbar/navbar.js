@@ -72,7 +72,6 @@ const Navbar = (props) => {
             onSuccess={onSignIn}
             onFailure={onError}
             cookiePolicy="single_host_origin"
-
           />
         )}
       </div>
