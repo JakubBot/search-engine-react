@@ -18,7 +18,7 @@ Project is created with:
 
 ## Home page
 In main page you have:
-![image](https://onedrive.live.com/?cid=38D142D7D1ACC663&id=38D142D7D1ACC663%21646&parId=root&o=OneUp)
+![image](https://github.com/JakubBot/search-engine-react/tree/master/src/images/page.png)
 
 ## Api I used
 * Google Login
