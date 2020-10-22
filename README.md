@@ -27,4 +27,10 @@ In main page you have:
 * Weather Api
 * Facebook Login
 
+## Home page
+In main page you have:
+![image](https://github.com/JakubBot/search-engine-react/blob/master/public/lupa.png)
+
+
+
 
