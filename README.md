@@ -16,15 +16,17 @@ Project is created with:
 * Create React App
 * git, npm
 
-## Home page
-In main page you have:
-![image](https://onedrive.live.com/?cid=38D142D7D1ACC663&id=38D142D7D1ACC663%21646&parId=root&o=OneUp)
-
 ## Api I used
 * Google Login
 * Google map
 * Github Api
 * Weather Api
 * Facebook Login
+
+## Home page
+In main page you have:
+![image](https://github.com/JakubBot/search-engine-react/blob/master/public/lupa.png)
+
+
 
 
