@@ -23,7 +23,7 @@ Project is created with:
 ## Home page
 
 In main page you have:
-![image](https://github.com/JakubBot/search-engine-react/tree/master/src/images/page.png)
+![image](https://github.com/JakubBot/search-engine-react/blob/master/src/images/page.png?raw=true)
 
 ## Api I used
 
